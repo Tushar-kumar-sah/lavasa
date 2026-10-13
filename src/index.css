@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #493328;
+    background-color: #F7F2E8;
+  }
+
+  h1, h2, h3, h4, .font-serif {
+    font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+  }
+}
+
+/* Custom pattern and decorative botanical accents */
+.bg-botanical-pattern {
+  background-image: radial-gradient(rgba(120, 133, 106, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.bg-subtle-noise {
+  background-color: #F7F2E8;
+  background-image: radial-gradient(rgba(73, 51, 40, 0.04) 1px, transparent 0);
+  background-size: 20px 20px;
+}
+
+/* Subtle glow for buttons & accents */
+.amber-glow {
+  box-shadow: 0 0 25px rgba(217, 164, 91, 0.35);
+}
+
+.amber-glow:hover {
+  box-shadow: 0 0 35px rgba(217, 164, 91, 0.55);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #EFE5D5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #78856A;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #293D30;
+}
