@@ -8,10 +8,30 @@
     font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     color: #493328;
     background-color: #F7F2E8;
+    -webkit-tap-highlight-color: transparent;
+    text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    overflow-x: hidden;
+    width: 100%;
+    min-height: 100svh;
   }
 
   h1, h2, h3, h4, .font-serif {
     font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+  }
+
+  /* Prevent iOS zoom on inputs */
+  input, select, textarea {
+    font-size: 16px;
+  }
+
+  @media (min-width: 640px) {
+    input, select, textarea {
+      font-size: 0.875rem;
+    }
   }
 }
 
@@ -36,20 +56,32 @@
   box-shadow: 0 0 35px rgba(217, 164, 91, 0.55);
 }
 
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
+/* Smooth horizontal scroll for categories */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
 }
 
-::-webkit-scrollbar-track {
-  background: #EFE5D5;
-}
+/* Custom desktop scrollbar */
+@media (min-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
 
-::-webkit-scrollbar-thumb {
-  background: #78856A;
-  border-radius: 4px;
-}
+  ::-webkit-scrollbar-track {
+    background: #EFE5D5;
+  }
 
-::-webkit-scrollbar-thumb:hover {
-  background: #293D30;
+  ::-webkit-scrollbar-thumb {
+    background: #78856A;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #293D30;
+  }
 }
