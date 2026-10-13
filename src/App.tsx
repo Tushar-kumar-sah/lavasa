@@ -11,6 +11,7 @@ import { ReservationSection } from './components/ReservationSection';
 import { LocationSection } from './components/LocationSection';
 import { Footer } from './components/Footer';
 import { FloatingActions } from './components/FloatingActions';
+import { Analytics } from '@vercel/analytics/react';
 
 export function App() {
   const handleOpenReservation = () => {
@@ -60,6 +61,9 @@ export function App() {
 
       {/* Mobile & Desktop Quick Actions Pill */}
       <FloatingActions onOpenReservation={handleOpenReservation} />
+
+      {/* Vercel Analytics */}
+      <Analytics />
     </div>
   );
 }
